@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>task12-学习CSS 3的新特性</title>
+  <style type="text/css" media="screen">
+    body{margin: 0; padding: 0;}
+    a{text-decoration: none;}
+    
+    .container{
+      width: 300px;
+      margin: 0 auto;
+      text-align: center;
+      border: 1px solid red;
+    }
+    .content-1{
+      display: inline-block;
+      margin-bottom: 20px; 
+    }
+    .content-1 thead{
+      background: #000;
+      color: #fff;
+    }
+    .content-1 tbody tr:nth-child(even){
+      background: #DBDADA;
+      color: #000;
+    }
+    .content-1 tbody tr:nth-child(odd){
+      background: #fff;
+      color: #000; 
+    }
+    .content-1 tbody tr:nth-child(-n+3){
+      color: #FB0404; 
+    }
+
+    .content-2{
+      width: 100%;
+      /*margin: 0 auto;*/
+      margin-bottom: 20px;
+    }
+    .content-2 input{
+      width: 100px;
+      transition: width .8s;
+    }
+    .content-2 input:focus{
+      width: 250px;
+    }
+
+    .num > a:link,
+    .num > a:hover,
+    .num > a:visited {
+        color: #ccc;
+        text-decoration: none;
+    }
+    .content-3{
+      position: relative;
+      overflow: hidden;
+      width: 300px;
+      height: 140px;
+      background: #ccc;
+    }
+    .content-3 .wrap{
+      position: relative;
+      width: 300%;
+      height: 100%;
+      transition: left .8s ease;
+    }
+    .box{
+      float: left;
+      width: 33.3%;
+      height: 100%; 
+    }
+    .box:first-child{
+      background: red;
+    }
+    .box:nth-child(2){
+      background: blue;
+    }
+    .box:nth-child(3){
+      background: green;
+    }
+    #slide1:target ~ .wrap {
+        left: 0;
+    }
+    #slide2:target ~ .wrap {
+        left: -100%;
+    }
+    #slide3:target ~ .wrap {
+        left: -200%;
+    }
+
+    .content-3 .num{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    .content-3 .num >a{
+      display: block;
+      width: 30px;
+      height: 30px;
+      float: left;
+      line-height: 30px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, .2);
+      border: 1px solid transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content-1">
+      <table>
+        <thead>
+          <tr>
+            <th>排名</th>
+            <th>网站</th>
+            <th>热度</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1.</td>
+            <td>百度前端技术学院</td>
+            <td>13000</td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td>百度前端技术学院</td>
+            <td>13000</td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td>百度前端技术学院</td>
+            <td>13000</td>
+          </tr>
+          <tr>
+            <td>4.</td>
+            <td>百度前端技术学院</td>
+            <td>13000</td>
+          </tr>
+          <tr>
+            <td>5.</td>
+            <td>百度前端技术学院</td>
+            <td>13000</td>
+          </tr>
+          <tr>
+            <td>6.</td>
+            <td>百度前端技术学院</td>
+            <td>13000</td>
+          </tr>
+          <tr>
+            <td>7.</td>
+            <td>百度前端技术学院</td>
+            <td>13000</td>
+          </tr>
+          <tr>
+            <td>8.</td>
+            <td>百度前端技术学院</td>
+            <td>13000</td>
+          </tr>
+          <tr>
+            <td>9.</td>
+            <td>百度前端技术学院</td>
+            <td>13000</td>
+          </tr>
+          <tr>
+            <td>10.</td>
+            <td>百度前端技术学院</td>
+            <td>13000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="content-2">
+      <input type="text" name="">
+    </div>
+
+    <div class="content-3">
+      <span id="slide1" hidden></span>
+      <span id="slide2" hidden></span>
+      <span id="slide3" hidden></span>
+      <div class="wrap">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="num">
+        <a href="#slide1">1</a>
+        <a href="#slide2">2</a>
+        <a href="#slide3">3</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
