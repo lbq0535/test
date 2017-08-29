@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task4-定位和居中问题</title>
+	<link rel="stylesheet" href="styles/task4-style.css">
+	<style type="text/css" media="screen">
+		*{margin: 0; padding: 0;}
+		.container{
+			width: 400px;
+			height: 200px;
+			background: #ccc;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -200px;
+			margin-top: -100px;
+			overflow: hidden;
+		}
+		.left_top{
+			width: 0;
+			height: 0;
+			border: 50px solid #fc0;
+			margin-left: -50px;
+			margin-top: -50px;
+			border-radius: 50%;
+		}
+		.right-bottom{
+			width: 0;
+			height: 0;
+			border: 50px solid #fc0;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			margin-right: -50px;
+			margin-bottom: -50px;
+			border-radius: 50%;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="left_top"></div>	
+		<div class="right-bottom"></div>	
+	</div>
+</body>
+</html>
